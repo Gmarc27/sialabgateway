@@ -13,6 +13,12 @@
 |
 */
 
-$router->get('/', function () use ($router) {
-    return $router->app->version();
-});
+$router->get('/users1', 'User1Controller@index');
+    $router->get('/users1/{id}', 'User1Controller@show');
+    $router->put('/users1/{id}', 'User1Controller@update'); // update user record
+    $router->delete('/users1/{id}', 'User1Controller@delete'); //sdelete record
+
+$router->get('/users2', 'User2Controller@index');
+    $router->get('/users2/{id}', 'User2Controller@show');
+    $router->put('/users2/{id}', 'User2Controller@update'); // update user record
+    $router->delete('/users2/{id}', 'User2Controller@delete'); //sdelete record
